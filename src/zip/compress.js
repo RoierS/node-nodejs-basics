@@ -17,6 +17,7 @@ const compress = async () => {
 
   try {
     await pipeline(srcStream, gzip, dstStream);
+    console.log(`\x1b[42m File compressed! \x1b[0m`);
   } catch (error) {
     throw new Error(error);
   }
